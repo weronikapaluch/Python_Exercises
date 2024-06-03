@@ -3,6 +3,11 @@
 The aim of this repsoitory is to document my self-development as a Python programmer. 
 My projects mainly concert linguistics  and working with and on text. 
 
-Me now: 🌱
+                                    Me now: 🌱
 
-Me soon: 🌳 
+                                    Me soon: 🌳 
+
+- [x] Study
+- [x] Show exercises
+- [ ] Create own projects
+- [ ] Get dream job
