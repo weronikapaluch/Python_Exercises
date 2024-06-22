@@ -27,3 +27,23 @@ def friend(x):
 
 def friend(x):
     return [name for name in x if len(name) == 4]
+
+
+# Given a string, remove any characters that are unique from the string.
+
+# Example:
+
+# input: "abccdefee"
+
+# output: "cceee"
+
+def only_duplicates(st):
+    counter = {}
+
+    for el in st:
+        if el in counter:
+            counter[el] += 1
+        else:
+            counter[el] = 1
+    
+    return ''.join([el for el in st if counter[el] > 1])
