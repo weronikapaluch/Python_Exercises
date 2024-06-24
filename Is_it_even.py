@@ -27,3 +27,16 @@ def high_and_low(numbers):
     max_num = max(lst_numbers)
     min_num = min(lst_numbers)
     return f"{max_num} {min_num}"
+
+
+#Write function bmi that calculates body mass index (bmi = weight / height2).
+def bmi(weight, height):
+    bmi = weight / (height**2)
+    if bmi <= 18.5: 
+        return "Underweight"
+    elif bmi <= 25.0: 
+        return "Normal"
+    elif bmi <= 30.0: 
+        return "Overweight"
+    elif bmi > 30: 
+        return "Obese"
