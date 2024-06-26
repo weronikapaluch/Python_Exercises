@@ -99,3 +99,14 @@ def get_middle(s):
                     word_value[word] += dictionary[letter]
                     
     return max(word_value,key=word_value.get)
+
+# Can you find the needle in the haystack?
+# Write a function findNeedle() that takes an array full of junk but containing one "needle"
+# After your function finds the needle it should return a message (as a string) that says:
+# "found the needle at position " plus the index it found the needle.
+
+def find_needle(haystack):
+    x = haystack.index("needle")
+    for word in haystack:
+        if word == "needle":
+            return f"found the needle at position {x}"
