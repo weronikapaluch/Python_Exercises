@@ -119,3 +119,14 @@ def find_needle(haystack):
 
 def feast(beast, dish):
     return beast[0]==dish[0] and dish[-1]==beast[-1]
+
+
+#You need to write regex that will validate a password to make sure it meets the following criteria:
+
+# At least six characters long
+# contains a lowercase letter
+# contains an uppercase letter
+# contains a digit
+# only contains alphanumeric characters (note that '_' is not alphanumeric)
+
+regex = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$'
