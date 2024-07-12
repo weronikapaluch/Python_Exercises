@@ -140,3 +140,15 @@ regex = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$'
 def animal_crackers(text):
     words = text.lower().split()
     return words[0][0] == words[1][0]
+
+Task 2: Palindrome Checker
+
+# Write a Python function called is_palindrome that takes a string as input and returns True if the string 
+# is a palindrome (reads the same forwards and backwards), and False otherwise. Use this function to check 
+# if the following strings are palindromes:
+# * "radar"
+# * "python"
+# * "level"
+
+def palindrome_checker(word):
+  return word == word[::-1]
