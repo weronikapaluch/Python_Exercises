@@ -28,3 +28,29 @@ if guess == number:
 
 else:
   print("Oh no! This time you lose :( It's ok, you'll get it next time. The number I was looking for was " + str(number))
+
+
+
+# Game 2
+# Write a program that takes a list of words as input from the user. 
+# The program should then ask the user to enter a word to search for in the list. 
+# If the word is found in the list, it should print "Found it!" Otherwise, it should print "Not found." (input + while)
+
+pl_nobel = ["Skłodowska","Sienkiewicz", "Reymont", "Miłosz", "Wałęsa", "Szymborska", "Tokarczuk"]
+find = True
+
+while find == True:
+  search = input("Please eneter the surname of a Polish Nobel Laureat: ").title()
+  for sn in range(len(pl_nobel)):
+    if search == (pl_nobel[sn]):
+      print("You are correct!")
+      break
+    elif sn == (len(pl_nobel)-1):
+      print("Nope! They are not a Polish Nobel Laureat.")
+  searchAgain = input("Would you like to have another go? Y/N").lower()
+  if searchAgain == ("y") or searchAgain == ("yes"):
+    print("OK")
+    find = True
+  else:
+    print("Ok, thanks for playing! See you next time.")
+    find = False
