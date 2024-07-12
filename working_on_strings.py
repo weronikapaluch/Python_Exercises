@@ -130,3 +130,13 @@ def feast(beast, dish):
 # only contains alphanumeric characters (note that '_' is not alphanumeric)
 
 regex = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$'
+
+##ANIMAL CRACKERS: Write a function takes a two-word string and returns True if both words begin with same letter
+    # animal_crackers('Levelheaded Llama') --> True
+    # animal_crackers('Crazy Kangaroo') --> False
+
+    # (split + index)
+
+def animal_crackers(text):
+    words = text.lower().split()
+    return words[0][0] == words[1][0]
