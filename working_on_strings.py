@@ -152,3 +152,15 @@ Task 2: Palindrome Checker
 
 def palindrome_checker(word):
   return word == word[::-1]
+
+# MASTER YODA: Given a sentence, return a sentence with the words reversed
+
+#     master_yoda('I am home') --> 'home am I'
+#     master_yoda('We are ready') --> 'ready are We'
+    
+# Note: The .join() method may be useful here. The .join() method allows you to 
+# join together strings in a list with some connector string.
+
+def master_yoda(text):
+    reversed_text = text.split()[::-1]
+    return " ".join(reversed_text).capitalize()
