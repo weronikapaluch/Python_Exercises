@@ -188,3 +188,14 @@ def camel_case(string):
 
 def DNAtoRNA(dna):
     return dna.replace('T', 'U')
+
+
+# This time no story, no theory. The examples below show you how to write function accum:
+# Examples:
+# accum("abcd") -> "A-Bb-Ccc-Dddd"
+# accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+# accum("cwAt") -> "C-Ww-Aaa-Tttt"
+
+def accum(st):
+    result = [char.upper() + char.lower() * i for i, char in enumerate(st)]
+    return '-'.join(result)
