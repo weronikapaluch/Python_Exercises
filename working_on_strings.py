@@ -164,3 +164,15 @@ def palindrome_checker(word):
 def master_yoda(text):
     reversed_text = text.split()[::-1]
     return " ".join(reversed_text).capitalize()
+
+# Write a method (or function, depending on the language) that converts a string to camelCase, that is, all words must have their first letter capitalized and spaces must be removed.
+
+# Examples (input --> output):
+# "hello case" --> "HelloCase"
+# "camel case word" --> "CamelCaseWord"
+
+def camel_case(s):
+    words = s.split()
+    capitalized_words = [word.capitalize() for word in words]
+    camel_case_string = ''.join(capitalized_words)
+    return camel_case_string
