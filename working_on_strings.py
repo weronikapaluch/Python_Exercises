@@ -199,3 +199,10 @@ def DNAtoRNA(dna):
 def accum(st):
     result = [char.upper() + char.lower() * i for i, char in enumerate(st)]
     return '-'.join(result)
+
+# Write a function that checks if a given string (case insensitive) is a palindrome.
+# A palindrome is a word, number, phrase, or other sequence of symbols that reads the 
+# same backwards as forwards, such as madam or racecar.
+
+def is_palindrome(s):
+    return True if s.lower()[::-1] == s.lower() else False
