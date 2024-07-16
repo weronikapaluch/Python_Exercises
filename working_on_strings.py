@@ -176,3 +176,6 @@ def camel_case(s):
     capitalized_words = [word.capitalize() for word in words]
     camel_case_string = ''.join(capitalized_words)
     return camel_case_string
+
+def camel_case(string):
+    return string.title().replace(" ", "")
