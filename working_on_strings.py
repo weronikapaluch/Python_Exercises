@@ -230,3 +230,12 @@ def find_glasses(lst):
     for index, word in enumerate(lst):
         if re.search(pattern, word):
             return index
+
+# Task: Write a function "coffee" that accepts a string as a parameter and returns that string with every instance of coffee in all caps.
+# Input: string. The word "coffee" may occur more than once. It may have some capital letters or already be in all-caps. There may be punctuation in the string too. It will not be part of another word like "Coffeeburger", which isn't a word anyway.
+# Output: string with all instances of coffee in all-caps:
+
+import re
+def coffee(sentence):
+    pattern = re.compile(r"coffee",re.IGNORECASE)
+    return pattern.sub("COFFEE", sentence)
