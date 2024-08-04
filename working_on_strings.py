@@ -217,3 +217,16 @@ def is_palindrome(s):
 def abbrev_name(name):
     ns = name.split()
     return f"{ns[0][0].capitalize()}.{ns[1][0].capitalize()}"
+
+
+# Oh no! I've lost my glasses, but paradoxically, I need glasses to find my glasses!
+# Please help me out by showing me the index in the list which contains my glasses. They look like two capital Os, with at least one dash in between!
+# This means that both O--O and O------------O are valid glasses, but not O----#--O for example!
+# Search thoroughly, you might find my glasses in places such as 'dustO-Odust'
+
+import re
+def find_glasses(lst):
+    pattern = r'O-+O'
+    for index, word in enumerate(lst):
+        if re.search(pattern, word):
+            return index
