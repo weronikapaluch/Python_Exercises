@@ -239,3 +239,21 @@ import re
 def coffee(sentence):
     pattern = re.compile(r"coffee",re.IGNORECASE)
     return pattern.sub("COFFEE", sentence)
+
+# Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
+# * url = "http://github.com/carbonfive/raygun" -> domain name = "github"
+# * url = "http://www.zombie-bites.com"         -> domain name = "zombie-bites"
+# * url = "https://www.cnet.com"                -> domain name = cnet"
+
+import re
+def domain_name(url):
+    pattern = r"^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)"
+    domain = re.findall(pattern, url)
+    if domain:
+        domain_parts = domain[0].split(".")
+        if len(domain_parts) > 2:
+            return domain_parts[-3]
+        else:
+            return domain_parts[-2]
+
