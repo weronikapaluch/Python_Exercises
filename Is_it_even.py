@@ -68,3 +68,12 @@ def how_much_i_love_you(nb_petals):
         "not at all"]
     
     return phrases[(nb_petals - 1) % 6]
+
+#Given an integer as input, can you round it to the next
+#(meaning, "greater than or equal") multiple of 5?
+
+def round_to_next5(n):
+    if n % 5 == 0:
+        return n
+    else:
+        return n + (5 - (n % 5))
