@@ -28,3 +28,34 @@ decimal_number = int(input("Enter a decimal number: "))
 hexadecimal_number = decimal_to_hexadecimal(decimal_number)
 print("The hexadecimal represntation of", decimal_number, "is", hexadecimal_number)
 
+
+# From a hexadecimal number to a decimal number
+
+def hexadecimal_to_decimal(hexadecimal_number):
+  hex_ints = []
+  hex_dict = {"A":10, "B":11, "C":12, "D":13, "E":14, "F":15}
+
+
+  hexadecimal_elements = [el for el in hexadecimal_number]
+
+  for el in hexadecimal_elements:
+    try:
+      hex_ints.append(int(el))
+    except ValueError:
+      hex_ints.append(hex_dict[el])
+
+  power = 0
+  order = 0
+  hex_values = []
+  hex_ints = hex_ints[::-1]
+
+  while order < len(hex_ints):
+    hex_values.append(hex_ints[order] * (16 ** power))
+    order += 1
+    power += 1
+
+  return sum(hex_values)
+
+hexadecimal_number = str(input("Enter a hexadecimal number:  "))
+decimal_number = hexadecimal_to_decimal(hexadecimal_number)
+print(f"The decimal representation of {hexadecimal_number} is {decimal_number}")
