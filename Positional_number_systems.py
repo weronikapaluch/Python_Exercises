@@ -75,3 +75,22 @@ def decimal_to_binary(decimal_number):
 decimal_number = int(input("Enter a decimal number: "))
 binary_number = decimal_to_binary(decimal_number)
 print("The binary represntation of", decimal_number, "is", binary_number)
+
+# From a binary number to a decimal number
+def binary_to_decimal(binary_number):
+    order = 0
+    power = 0
+    decimal_number = []
+
+    binary_number = [int(el) for el in binary_number][::-1]
+
+    while order < len(binary_number):
+        decimal_number.append(binary_number[order] * (2 ** power))
+        order += 1
+        power += 1
+
+    return sum(decimal_number)
+
+binary_number = str(input("Enter a binary number: "))
+decimal_number = binary_to_decimal(binary_number)
+print(f"The decimal representation of {binary_number} is {decimal_number}")
