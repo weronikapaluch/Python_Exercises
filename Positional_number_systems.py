@@ -59,3 +59,19 @@ def hexadecimal_to_decimal(hexadecimal_number):
 hexadecimal_number = str(input("Enter a hexadecimal number:  "))
 decimal_number = hexadecimal_to_decimal(hexadecimal_number)
 print(f"The decimal representation of {hexadecimal_number} is {decimal_number}")
+
+
+# From a decimal number to a binary
+def decimal_to_binary(decimal_number):
+  binary_representation = ''
+
+  while decimal_number > 0:
+    remainder = decimal_number % 2
+    binary_representation = str(remainder) + binary_representation
+    decimal_number //= 2
+
+  return binary_representation
+
+decimal_number = int(input("Enter a decimal number: "))
+binary_number = decimal_to_binary(decimal_number)
+print("The binary represntation of", decimal_number, "is", binary_number)
